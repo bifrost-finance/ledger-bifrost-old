@@ -4,10 +4,10 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches:
-      - devnet
+      - kusama
   pull_request:
     branches:
-      - devnet
+      - kusama
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: 'devnet'
+          ref: 'kusama'
           submodules: true
 
       - name: Build with Clang Static Analyzer

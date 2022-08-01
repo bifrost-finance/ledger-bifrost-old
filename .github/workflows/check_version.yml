@@ -1,9 +1,9 @@
-name: "Verify PRs to devnet"
+name: "Verify PRs to kusama"
 
 on:
   pull_request:
     branches:
-      - devnet
+      - kusama
 
 jobs:
   configure:
@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: 'devnet'
+          ref: 'kusama'
           submodules: true
 
       - name: Invoke `version`
