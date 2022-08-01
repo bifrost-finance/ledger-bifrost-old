@@ -4,9 +4,10 @@ on:
     tags:
       - v*
     branches:
-      - main
-      - master
+      - devnet
   pull_request:
+    branches:
+      - devnet
   workflow_dispatch:
 
 jobs:
@@ -25,6 +26,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Install deps
         run: |
           sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
@@ -40,6 +42,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Install deps
         run: |
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -73,6 +76,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Build Standard app
         shell: bash -l {0}
         run: |
@@ -99,6 +103,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Build Standard app
         shell: bash -l {0}
         run: |
@@ -120,6 +125,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Build Standard app
         shell: bash -l {0}
         run: |
@@ -197,7 +203,7 @@ jobs:
 
   build_package_0:
     needs: [configure, build, build_nano_S, build_nano_SP, build_nano_X]
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/devnet' }}
     runs-on: ubuntu-latest
     container:
       image: zondax/builder-bolos:latest
@@ -211,6 +217,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Install deps
         run: pip install ledgerblue
 
@@ -236,7 +243,7 @@ jobs:
 
   build_package_1:
     needs: [configure, build, build_nano_S, build_nano_SP, build_nano_X]
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/devnet' }}
     runs-on: ubuntu-latest
     container:
       image: zondax/builder-bolos:latest
@@ -250,6 +257,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Install deps
         run: pip install ledgerblue
 
@@ -275,7 +283,7 @@ jobs:
 
   build_package_2:
     needs: [configure, build, build_nano_S, build_nano_SP, build_nano_X]
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/devnet' }}
     runs-on: ubuntu-latest
     container:
       image: zondax/builder-bolos:latest
@@ -289,6 +297,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          ref: 'devnet'
       - name: Install deps
         run: pip install ledgerblue
 

@@ -1,10 +1,9 @@
-name: "Verify PRs to main"
+name: "Verify PRs to devnet"
 
 on:
   pull_request:
     branches:
-      - main
-      - master
+      - devnet
 
 jobs:
   configure:
@@ -30,6 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+          ref: 'devnet'
           submodules: true
 
       - name: Invoke `version`
