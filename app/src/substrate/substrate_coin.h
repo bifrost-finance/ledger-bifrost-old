@@ -61,9 +61,9 @@ typedef enum {
 #define COIN_NAME "Bifrost"
 #define COIN_TICKER "BNC "
 
-#define MENU_MAIN_APP_LINE1 "Bifrost(Kusama)"
+#define MENU_MAIN_APP_LINE1 "Bifrost Kusama"
 #define MENU_MAIN_APP_LINE2 "Ready"
-#define APPVERSION_LINE1 "Bifrost(Kusama)"
+#define APPVERSION_LINE1 "Bifrost Kusama"
 #define APPVERSION_LINE2 "v" APPVERSION
 
 #define ACCOUNT_DEFAULT "Legacy"
