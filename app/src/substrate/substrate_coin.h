@@ -58,7 +58,7 @@ typedef enum {
 #define COIN_AMOUNT_DECIMAL_PLACES 12
 
 #define COIN_GENESIS_HASH "9f28c6a68e0fc9646eff64935684f6eeeece527e37bbe1f213d22caa1d9d6bed"
-#define COIN_NAME "Bifrost"
+#define COIN_NAME "bifrost-kusama"
 #define COIN_TICKER "BNC "
 
 #define MENU_MAIN_APP_LINE1 "Bifrost Kusama"
