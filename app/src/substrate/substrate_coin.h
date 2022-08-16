@@ -20,7 +20,7 @@ extern "C" {
 #endif
 
 #define COIN_ADDR_TYPE 6
-#define CLA 0xa1
+#define CLA 0xae
 
 #define HDPATH_LEN_DEFAULT 5
 #define HDPATH_0_DEFAULT (0x80000000 | 0x2c)
