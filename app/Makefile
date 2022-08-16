@@ -75,13 +75,13 @@ DEFINES += APP_STANDARD
 ifneq ($(TARGET_NAME),TARGET_NANOS)
 DEFINES += SUBSTRATE_PARSER_FULL
 endif
-APPNAME = "Bifrost Kusama"
+APPNAME = "bifrost-kusama"
 APPPATH = "44'/788'" --path "44'/354'"
 
 else ifeq ($(COIN),BNC_XL)
 # XL app configuration
 DEFINES += APP_STANDARD SUBSTRATE_PARSER_FULL
-APPNAME = "Bifrost Kusama XL"
+APPNAME = "bifrost-kusama-xl"
 APPPATH = "44'/788'" --path "44'/354'"
 
 else
